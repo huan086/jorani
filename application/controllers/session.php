@@ -147,7 +147,7 @@ class Session extends CI_Controller {
                 if ($this->users_model->isActive($this->input->post('login'))) {
                     $this->session->set_flashdata('msg', lang('session_login_flash_bad_credentials'));
                 } else {
-                    $this->session->set_flashdata('msg', lang('session_login_flash_account_disabled'));
+                    $this->session->set_flashdata('msg', lang('session_login_flash_bad_credentials'));
                 }
                 redirect('session/login');
             } else {
